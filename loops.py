@@ -22,4 +22,4 @@ for i in range(3)
      price.append(float(input("Entetr Price: ")))
 
      for  i in price:
-         tptal += iprint(f"Total: {total}")
+         total += iprint(f"Total: {total}")

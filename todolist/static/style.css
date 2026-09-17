@@ -1,0 +1,214 @@
+
+/* General */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    color: #222;
+}
+
+
+/* Navigation */
+
+nav {
+    background-color: white;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #ddd;
+}
+
+nav h2 {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #555;
+}
+
+
+/* Main */
+
+main {
+    width: 500px;
+    margin: 50px auto;
+}
+
+h1 {
+    margin-bottom: 25px;
+}
+
+
+/* Task */
+
+.task {
+    background-color: white;
+
+    padding: 18px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Completed task */
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+
+/* Task actions */
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.actions a:hover {
+    text-decoration: underline;
+}
+
+
+/* Add button */
+
+.add-button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 12px 18px;
+
+    background-color: #222;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+}
+
+.add-button:hover {
+    background-color: #444;
+}
+
+
+/* Forms */
+
+form {
+    background-color: white;
+
+    padding: 25px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+    box-sizing: border-box;
+}
+
+button {
+    padding: 12px 18px;
+
+    background-color: #222;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+
+/* Back button */
+
+.back-button {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: #222;
+
+    text-decoration: none;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin-left: 8px;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    .task {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+}
+

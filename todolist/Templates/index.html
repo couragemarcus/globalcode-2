@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Todo List</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h2>My Todo List</h2>
+
+        <div>
+            <a href="/">Home</a>
+            <a href="/">Tasks</a>
+            <a href="/tasks/add">Add Task</a>
+            <a href="/about">About</a>
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <h1>My Tasks</h1>
+
+        {% for task in tasks %}
+
+            <div class="task">
+
+                {% if task["completed"] == True %}
+
+                    <span class="completed">
+                        ✓ {{ task["title"] }}
+                    </span>
+
+                {% else %}
+
+                    <span>
+                        ☐ {{ task["title"] }}
+                    </span>
+
+                {% endif %}
+
+
+                <div class="actions">
+
+                    {% if task["completed"] == False %}
+
+                        <a href="/tasks/complete/{{ task['id'] }}">
+                            Complete
+                        </a>
+
+                    {% else %}
+
+                        <span>Completed</span>
+
+                    {% endif %}
+
+                    <a href="/tasks/edit/{{ task['id'] }}">
+                        Edit
+                    </a>
+
+                    <a href="/tasks/delete/{{ task['id'] }}">
+                        Delete
+                    </a>
+
+                </div>
+
+            </div>
+
+        {% else %}
+
+            <p>No tasks available.</p>
+
+        {% endfor %}
+
+
+        <a class="add-button" href="/tasks/add">
+            + Add Task
+        </a>
+
+    </main>
+
+</body>
+
+</html>
+```
